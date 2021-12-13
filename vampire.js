@@ -65,6 +65,23 @@ class Vampire {
     
   }
 
+/*
+  name root
+root
+found a match! root
+name andrew
+offspring andrew
+name andrew
+andrew
+found a match! andrew
+offspring c
+name andrew
+offspring d
+name andrew
+offspring e
+name andrew
+*/
+
   // Returns the total number of vampires that exist
   get totalDescendents() {
     
