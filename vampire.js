@@ -46,7 +46,7 @@ class Vampire {
   // Returns the vampire object with that name, or null if no vampire exists with that name
   vampireWithName(name) {
 
-    console.log('name', name)
+    console.log('name being searched', name)
 
     // let vampire;
 
@@ -66,18 +66,18 @@ class Vampire {
   }
 
 /*
-  name root
+  name being searched root
 root
 found a match! root
-name andrew
+name being searched andrew
 offspring andrew
-name andrew
+name being searched andrew
 andrew
 found a match! andrew
 offspring c
-name andrew
+name being searched andrew
 offspring d
-name andrew
+name being searched andrew
 offspring e
 name andrew
 */
