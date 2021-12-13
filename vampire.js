@@ -46,41 +46,60 @@ class Vampire {
   // Returns the vampire object with that name, or null if no vampire exists with that name
   vampireWithName(name) {
 
-    console.log('name', name)
-
-    // let vampire;
+    console.log('name being searched', name)
 
     if (this.name === name) {
-      console.log(name);
       console.log('found a match!', this.name);
       return this;
     }
     
     for (const offspring of this.offspring) {
       console.log('offspring', offspring.name);
-      offspring.vampireWithName(name);
+      const vampWeLookingFor = offspring.vampireWithName(name);
+      if (vampWeLookingFor) {
+        return vampWeLookingFor;
+      }
     }
 
     return null;
     
   }
 
-/*
-  name root
-root
+  /*
+  returns. line 58 & 59 is the difference. 
+
+ name being searched root
 found a match! root
-name andrew
+name being searched andrew
 offspring andrew
-name andrew
-andrew
+name being searched andrew
 found a match! andrew
+name being searched sarah
+offspring andrew
+name being searched sarah
+offspring sarah
+name being searched sarah
+found a match! sarah
+name being searched e
+offspring andrew
+name being searched e
+offspring sarah
+name being searched e
 offspring c
-name andrew
+name being searched e
 offspring d
-name andrew
+name being searched e
 offspring e
-name andrew
-*/
+name being searched e
+found a match! e
+name being searched e
+offspring d
+name being searched e
+offspring e
+name being searched e
+found a match! e
+  
+  */
 
   // Returns the total number of vampires that exist
   get totalDescendents() {
