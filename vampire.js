@@ -47,6 +47,11 @@ class Vampire {
   vampireWithName(name) {
 
     console.log('name being searched', name)
+<<<<<<< HEAD
+=======
+
+    // let vampire;
+>>>>>>> af98f95c2fbe1071edc61eb9dcfb5012bbb0d470
 
     if (this.name === name) {
       console.log('found a match!', this.name);
@@ -65,14 +70,24 @@ class Vampire {
     
   }
 
+<<<<<<< HEAD
   /*
   returns. line 58 & 59 is the difference. 
 
  name being searched root
+=======
+/*
+  name being searched root
+root
+>>>>>>> af98f95c2fbe1071edc61eb9dcfb5012bbb0d470
 found a match! root
 name being searched andrew
 offspring andrew
 name being searched andrew
+<<<<<<< HEAD
+=======
+andrew
+>>>>>>> af98f95c2fbe1071edc61eb9dcfb5012bbb0d470
 found a match! andrew
 name being searched sarah
 offspring andrew
@@ -86,6 +101,7 @@ name being searched e
 offspring sarah
 name being searched e
 offspring c
+<<<<<<< HEAD
 name being searched e
 offspring d
 name being searched e
@@ -95,6 +111,11 @@ found a match! e
 name being searched e
 offspring d
 name being searched e
+=======
+name being searched andrew
+offspring d
+name being searched andrew
+>>>>>>> af98f95c2fbe1071edc61eb9dcfb5012bbb0d470
 offspring e
 name being searched e
 found a match! e
