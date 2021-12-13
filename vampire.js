@@ -72,7 +72,6 @@ class Vampire {
     console.log('current iteration:', this.name);
     // for the first 'root' vamp (do not) add one to counter 
    
-
     // traverse through each node after the root vamp
     for (const offspring of this.offspring) {
       counter += 1; //omg it was this. Put counter in node iteration loop.
@@ -81,13 +80,10 @@ class Vampire {
       const depthCounter = offspring.totalDescendents;
       // counter = counter + the variable --> continue iterating.
       counter += depthCounter;
-      console.log('depth counter after node iteration:', depthCounter);
-      console.log('global counter after node iteration:', counter);
     }
     
     console.log('iteration:', this.name, 'counter just before return:', counter);
     return counter;
-    
   }
 
   // Returns an array of all the vampires that were converted after 1980
