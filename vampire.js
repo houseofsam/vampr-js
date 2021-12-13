@@ -47,11 +47,6 @@ class Vampire {
   vampireWithName(name) {
 
     console.log('name being searched', name)
-<<<<<<< HEAD
-=======
-
-    // let vampire;
->>>>>>> af98f95c2fbe1071edc61eb9dcfb5012bbb0d470
 
     if (this.name === name) {
       console.log('found a match!', this.name);
@@ -70,60 +65,27 @@ class Vampire {
     
   }
 
-<<<<<<< HEAD
-  /*
-  returns. line 58 & 59 is the difference. 
-
- name being searched root
-=======
-/*
-  name being searched root
-root
->>>>>>> af98f95c2fbe1071edc61eb9dcfb5012bbb0d470
-found a match! root
-name being searched andrew
-offspring andrew
-name being searched andrew
-<<<<<<< HEAD
-=======
-andrew
->>>>>>> af98f95c2fbe1071edc61eb9dcfb5012bbb0d470
-found a match! andrew
-name being searched sarah
-offspring andrew
-name being searched sarah
-offspring sarah
-name being searched sarah
-found a match! sarah
-name being searched e
-offspring andrew
-name being searched e
-offspring sarah
-name being searched e
-offspring c
-<<<<<<< HEAD
-name being searched e
-offspring d
-name being searched e
-offspring e
-name being searched e
-found a match! e
-name being searched e
-offspring d
-name being searched e
-=======
-name being searched andrew
-offspring d
-name being searched andrew
->>>>>>> af98f95c2fbe1071edc61eb9dcfb5012bbb0d470
-offspring e
-name being searched e
-found a match! e
-  
-  */
-
   // Returns the total number of vampires that exist
   get totalDescendents() {
+    // set counter to zero
+    let counter = 0;
+    console.log('current iteration:', this.name);
+    // for the first 'root' vamp (do not) add one to counter 
+    counter += 1;
+
+    // traverse through each node after the root vamp
+    for (const offspring of this.offspring) {
+      // on each node add to the counter
+      // remember to assign each recursive case a variable
+      const depthCounter = offspring.totalDescendents;
+      // counter = counter + the variable --> continue iterating.
+      counter += depthCounter;
+      console.log('depth counter after node iteration:', depthCounter);
+      console.log('global counter after node iteration:', counter);
+    }
+    
+    console.log('iteration:', this.name, 'counter just before return:', counter);
+    return counter;
     
   }
 
