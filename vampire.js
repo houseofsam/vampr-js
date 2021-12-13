@@ -71,10 +71,11 @@ class Vampire {
     let counter = 0;
     console.log('current iteration:', this.name);
     // for the first 'root' vamp (do not) add one to counter 
-    counter += 1;
+   
 
     // traverse through each node after the root vamp
     for (const offspring of this.offspring) {
+      counter += 1; //omg it was this. Put counter in node iteration loop.
       // on each node add to the counter
       // remember to assign each recursive case a variable
       const depthCounter = offspring.totalDescendents;
